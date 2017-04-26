@@ -15,5 +15,5 @@ ansible 2.2.1
   b、启动site.py
   c、配置ansible
   
-  客户端只需要 curl -d "3chgb02viLkkygu6okW3I3zxwoJEpz" http://IP:PORT/get-local-ip
+  客户端只需要 curl -d "3chgb02viLkkygu6okW3I3zxwoJEpzddd" http://IP:PORT/get-local-ip
   就可以将自己的IP发送给服务端，然后你就可以ssh到集群了
