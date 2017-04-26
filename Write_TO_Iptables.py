@@ -4,7 +4,7 @@ import os
 import sys
 def write2iptables(ip):
 #将ssh端口状态为ACCEPT，且源地址是0.0.0.0全部DROP，只将客户端传递过来的IP加到INPUT
-    ssh_port = os.popen("cat /etc/ssh/sshd_config|grep 'Port '|awk -F ' ' {'print $2'}").read()
+    ssh_port = os.popen("cat /etc/ssh/sshd_config|grep 'Port '|awk -F ' ' {'print $2'}").read().strip('\n')
     n = 0
     for i in os.popen('iptables -L -n --line|grep ACCEPT|grep "dpt:%s"|awk -F " " {"print \$1,\$5"}' %ssh_port):
         #print "i:%s" %i
